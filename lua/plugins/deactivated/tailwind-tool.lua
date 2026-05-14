@@ -10,7 +10,7 @@ return {
 
   opts = {
     server = {
-      override = false, -- setup the server from the plugin if true
+      override = true, -- setup the server from the plugin if true
       settings = { -- shortcut for `settings.tailwindCSS`
         -- experimental = {
         --   classRegex = { "tw\\('([^']*)'\\)" }
@@ -67,17 +67,17 @@ return {
     },
   },
 
-  config = function(_, opts)
-    vim.lsp.config('tailwindcss', {
-      settings = {
-        tailwindCSS = {
-          classAttributes = { 'class', 'className', 'ngClass' },
-        },
-      },
-    })
-
-    vim.lsp.enable 'tailwindcss'
-
-    require('tailwind-tools').setup(opts)
-  end,
+  -- config = function(_, opts)
+  --   vim.lsp.config('tailwindcss', {
+  --     settings = {
+  --       tailwindCSS = {
+  --         classAttributes = { 'class', 'className', 'ngClass' },
+  --       },
+  --     },
+  --   })
+  --
+  --   vim.lsp.enable 'tailwindcss'
+  --
+  --   require('tailwind-tools').setup(opts)
+  -- end,
 }

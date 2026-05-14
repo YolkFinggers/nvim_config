@@ -8,8 +8,18 @@ return { -- Highlight, edit, and navigate code
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
   config = function()
     -- ensure basic parser are installed
-    local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
+    local parsers = { 'bash', 'c', 'diff', 'php', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
     require('nvim-treesitter').install(parsers)
+
+    -- local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+    -- parser_config.blade = {
+    --   install_info = {
+    --     url = 'https://github.com/EmranMR/tree-sitter-blade',
+    --     files = { 'src/parser.c' },
+    --     branch = 'main',
+    --   },
+    --   filetype = 'blade',
+    -- }
 
     ---@param buf integer
     ---@param language string

@@ -47,5 +47,18 @@ return { -- Autoformat
       -- Dedicated Blade formatter
       blade = { 'blade-formatter' },
     },
+    formatters = {
+      ['blade-formatter'] = { -- Customize the command to include arguments
+        inherit = true,
+        prepend_args = {
+          '--wrap-attributes',
+          'force-expand-multiline',
+        },
+      },
+      prettier = {
+        inherit = true,
+        prepend_args = { '--single-attribute-per-line' },
+      },
+    },
   },
 }
