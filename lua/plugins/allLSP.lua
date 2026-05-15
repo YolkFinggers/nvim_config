@@ -256,5 +256,42 @@ return {
         end,
       },
     }
+
+    -- Tailwind completion
+
+    vim.lsp.config('tailwindcss', {
+      filetypes = {
+        'html',
+        'css',
+        'scss',
+        'javascript',
+        'javascriptreact',
+        'typescript',
+        'typescriptreact',
+        'vue',
+        'svelte',
+        'php',
+        'blade',
+      },
+
+      init_options = {
+        userLanguages = {
+          blade = 'html',
+        },
+      },
+      settings = {
+        tailwindCSS = {
+          classAttributes = {
+            'class',
+            'className',
+            'class:list',
+            'classList',
+            'ngClass',
+          },
+        },
+      },
+    })
+
+    vim.lsp.enable 'tailwindcss'
   end,
 }
