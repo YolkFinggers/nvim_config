@@ -2,7 +2,7 @@ return {
   -- Autocompletion
   {
     'saghen/blink.cmp',
-    version = '1.*',
+    version = '1.10.2',
     event = 'VimEnter',
 
     dependencies = {
@@ -98,7 +98,7 @@ return {
       },
 
       fuzzy = {
-        implementation = 'prefer_rust_with_warning',
+        implementation = 'lua',
       },
 
       sources = {
